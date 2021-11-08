@@ -1,0 +1,116 @@
+body {
+	margin: 0; 
+	padding: 0;
+	font-size: 62.5%;
+	background: url('polaroid.png');
+}
+
+
+#flipbook {
+	padding: 0;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+	
+	width: 100%;
+	height: 100vh;
+	background: #fff;
+}
+
+#flipbook .slide {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	left: 0;
+}
+
+#flipbook .slide .img {
+	width: 50%;
+	position: absolute;
+	
+	height: 100vh;
+	background-size: 100% 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+
+	background-repeat: no-repeat !important;
+	-webkit-transition-property: -webkit-transform, box-shadow;
+	-webkit-transition-timing-function: linear, linear;
+	transition-property: transform, box-shadow;
+	transition-timing-function: linear, linear;
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+#flipbook {
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+#flipbook .slide .content {
+	display: none;
+}
+
+#flipbook .prev, #flipbook .next {
+	z-index: 9999999;
+	position: absolute;
+	background: black;
+	padding: 20px;
+	color: #fff;
+	top: 50%;
+	width: 64px;
+	height: 64px;
+	box-sizing: border-box;
+	font-size: 2em;
+	cursor: pointer;
+	background: #154a67;
+	-moz-box-sizing: border-box;
+	font-family: 'SSStandard', sans-serif;
+}
+
+#flipbook .next {
+	right: 2%;
+	box-shadow: inset 50px 0 30px -30px rgba(0,0,0,0.3);
+}
+
+#flipbook .prev {
+	left: 2%px;
+	box-shadow: inset -50px 0 30px -30px rgba(0,0,0,0.3);
+}
+
+#flipbook .prev:hover, #flipbook .next:hover {
+	background: #1f6387;
+}
+
+#flipbook .prev:active {
+	box-shadow: inset -50px 0 30px -30px rgba(0,0,0,0.3), inset 0 0 10px rgba(0,0,0,0.3);
+}
+
+#flipbook .next:active {
+	box-shadow: inset 50px 0 30px -30px rgba(0,0,0,0.3), inset 0 0 10px rgba(0,0,0,0.3);
+}
+
+#flipbook .current {
+	z-index: 99999;
+}
+
+#pagination {
+	display: none;
+
+}
+
+#pagination div {
+	display: none;
+	
+}
+
+#pagination .cur {
+	display: none;
+	background: blue;
+}
+
+/* ------- IGNORE */
